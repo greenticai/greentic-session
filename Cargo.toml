@@ -5,7 +5,7 @@ edition = "2024"
 rust-version = "1.90"
 license = "MIT"
 description = "Greentic multi-tenant session manager with in-memory and Redis backends"
-repository = "https://github.com/greentic-ai/greentic-session"
+repository = "https://github.com/greenticai/greentic-session"
 keywords = ["greentic", "session", "multi-tenant", "redis"]
 categories = ["data-structures", "asynchronous"]
 readme = "README.md"
@@ -33,3 +33,4 @@ hex = "0.4"
 [dev-dependencies]
 proptest = "1"
 serde_json = "1"
+
