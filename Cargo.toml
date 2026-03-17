@@ -2,7 +2,7 @@
 name = "greentic-session"
 version = "0.4.8"
 edition = "2024"
-rust-version = "1.90"
+rust-version = "1.91"
 license = "MIT"
 description = "Greentic multi-tenant session manager with in-memory and Redis backends"
 repository = "https://github.com/greenticai/greentic-session"
