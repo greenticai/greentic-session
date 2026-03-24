@@ -199,12 +199,12 @@ impl RedisSessionStore {
         user: &UserId,
         data: &SessionData,
     ) -> SessionResult<()> {
-        if let Some(ctx_user) = Self::normalize_user(ctx) {
-            if ctx_user != user {
-                return Err(invalid_argument(
-                    "user must match tenant context when registering a wait",
-                ));
-            }
+        if let Some(ctx_user) = Self::normalize_user(ctx)
+            && ctx_user != user
+        {
+            return Err(invalid_argument(
+                "user must match tenant context when registering a wait",
+            ));
         }
         if let Some(stored_user) = Self::normalize_user(&data.tenant_ctx) {
             if stored_user != user {
@@ -318,12 +318,12 @@ impl SessionStore for RedisSessionStore {
         conn.set::<_, _, ()>(&scope_key, session_key.as_str())
             .map_err(redis_error)?;
         Self::apply_ttl(&mut conn, &scope_key, ttl)?;
-        if let Some(previous) = previous {
-            if previous != session_key.as_str() {
-                let _: () = conn
-                    .srem::<_, _, ()>(&user_waits_key, previous)
-                    .map_err(redis_error)?;
-            }
+        if let Some(previous) = previous
+            && previous != session_key.as_str()
+        {
+            let _: () = conn
+                .srem::<_, _, ()>(&user_waits_key, previous)
+                .map_err(redis_error)?;
         }
         Ok(())
     }
