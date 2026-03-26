@@ -1,31 +1,26 @@
-# SECURITY_FIX_REPORT
+# Security Fix Report
 
-Date (UTC): 2026-03-25
-Branch: `ci/add-workflow-permissions`
+Date: 2026-03-26 (UTC)
+Branch: `chore/shared-ci-template`
 
-## 1) Alert Analysis
-- Input security alerts JSON reviewed: `{"dependabot": [], "code_scanning": []}`
-- Repository alert files reviewed:
-  - `dependabot-alerts.json`: `[]`
-  - `code-scanning-alerts.json`: `[]`
-  - `security-alerts.json`: `{"dependabot": [], "code_scanning": []}`
+## Inputs Reviewed
+- Dependabot alerts: `0`
+- Code scanning alerts: `0`
+- New PR dependency vulnerabilities: `0`
 
-Result: No Dependabot alerts and no code-scanning alerts were present.
+## PR Dependency Change Review
+Compared `HEAD` against `origin/main` to identify PR-introduced file changes.
 
-## 2) PR Dependency Vulnerability Check
-- Input `New PR Dependency Vulnerabilities` reviewed: `[]`
-- Repository PR vulnerability file reviewed:
-  - `pr-vulnerable-changes.json`: `[]`
-- Dependency manifests/locks detected in repo:
-  - `Cargo.toml`
-  - `Cargo.lock`
-- Checked for local PR-context changes in dependency files (`git diff --name-only -- Cargo.toml Cargo.lock`): none
+Changed files in PR:
+- `.github/workflows/ci.yml`
 
-Result: No new vulnerabilities were introduced via dependency-file changes in this PR context.
+Dependency/lock files changed in PR:
+- None
 
-## 3) Remediation Actions
-- No vulnerable dependencies or code paths were identified from provided inputs.
-- No code or dependency changes were required.
+## Remediation Actions
+- No vulnerabilities were present in the provided alert sources.
+- No dependency vulnerabilities were introduced by this PR.
+- No code or dependency remediation changes were required.
 
-## 4) Outcome
-No security remediation was necessary for this run.
+## Result
+Repository state is unchanged with respect to vulnerability remediation, and no security fixes were necessary for this PR based on the provided data.
