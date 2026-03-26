@@ -26,7 +26,7 @@ uuid = { version = "1", features = ["serde", "v4"] }
 parking_lot = "0.12"
 redis = { version = "1", optional = true }
 schemars = { version = "1", optional = true }
-sha2 = "0.10"
+sha2 = "0.11"
 hex = "0.4"
 
 
