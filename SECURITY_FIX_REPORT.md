@@ -8,13 +8,13 @@ Role: CI Security Reviewer
 - Code scanning alerts: 0
 
 ## Findings
-No security vulnerabilities were present in the provided alert data.
+No security vulnerabilities were present in the supplied alert data.
 
 ## Remediation Performed
-No code or dependency changes were applied because there were no actionable alerts.
+No code or dependency changes were required because there were no actionable alerts.
 
 ## Files Changed
-- `SECURITY_FIX_REPORT.md` (updated for this run)
+- SECURITY_FIX_REPORT.md
 
 ## Residual Risk
-No residual risk identified from the supplied alert inputs.
+No residual risk identified from the provided alert inputs.
