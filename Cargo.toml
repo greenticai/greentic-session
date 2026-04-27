@@ -1,34 +1,61 @@
 [package]
 name = "greentic-session"
-version = "0.5.0"
+version = "0.6.0-dev.0"
 edition = "2024"
 rust-version = "1.95"
 license = "MIT"
 description = "Greentic multi-tenant session manager with in-memory and Redis backends"
 repository = "https://github.com/greenticai/greentic-session"
-keywords = ["greentic", "session", "multi-tenant", "redis"]
-categories = ["data-structures", "asynchronous"]
+keywords = [
+    "greentic",
+    "session",
+    "multi-tenant",
+    "redis",
+]
+categories = [
+    "data-structures",
+    "asynchronous",
+]
 readme = "README.md"
 
 [features]
 default = []
-redis = ["dep:redis"]
+redis = [
+    "dep:redis",
+]
 inmemory = []
-schema = ["dep:schemars"]
-interfaces = ["dep:greentic-interfaces"]
+schema = [
+    "dep:schemars",
+]
+interfaces = [
+    "dep:greentic-interfaces",
+]
 
 [dependencies]
-greentic-types = "0.5"
-greentic-interfaces = { version = "0.5", optional = true }
-
+greentic-types = ">=0.6.0-dev, <0.7.0-0"
 serde_json = "1"
-uuid = { version = "1", features = ["serde", "v4"] }
 parking_lot = "0.12"
-redis = { version = "1", optional = true }
-schemars = { version = "1", optional = true }
 sha2 = "0.11"
 hex = "0.4"
 
+[dependencies.greentic-interfaces]
+version = ">=0.6.0-dev, <0.7.0-0"
+optional = true
+
+[dependencies.uuid]
+version = "1"
+features = [
+    "serde",
+    "v4",
+]
+
+[dependencies.redis]
+version = "1"
+optional = true
+
+[dependencies.schemars]
+version = "1"
+optional = true
 
 [dev-dependencies]
 proptest = "1"
