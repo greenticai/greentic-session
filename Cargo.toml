@@ -1,6 +1,6 @@
 [package]
 name = "greentic-session"
-version = "1.2.0-research.0"
+version = "1.2.0-research.1"
 edition = "2024"
 rust-version = "1.95"
 license = "MIT"
@@ -32,14 +32,14 @@ interfaces = [
 ]
 
 [dependencies]
-greentic-types = "=1.2.0-research.1"
+greentic-types = "=1.2.0-research.2"
 serde_json = "1"
 parking_lot = "0.12"
 sha2 = "0.11"
 hex = "0.4"
 
 [dependencies.greentic-interfaces]
-version = "=1.2.0-research.0"
+version = "=1.2.0-research.1"
 optional = true
 
 [dependencies.uuid]
