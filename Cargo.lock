@@ -656,7 +656,7 @@ dependencies = [
 
 [[package]]
 name = "greentic-session"
-version = "1.1.0-dev.0"
+version = "1.1.0"
 dependencies = [
  "greentic-interfaces",
  "greentic-types",
@@ -1218,9 +1218,9 @@ dependencies = [
 
 [[package]]
 name = "redis"
-version = "1.2.4"
+version = "1.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bae41a63fd0b8a5372f82b21e810e09a316f5dd7efd96bf08e678fb240fc1918"
+checksum = "b0b9503711b03773e43b31668c7b5bd279ee7cd9b7d18cff7c23a42cc1d08e5a"
 dependencies = [
  "arcstr",
  "combine",
